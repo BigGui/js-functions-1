@@ -79,7 +79,7 @@ function increaseValuePercent(a, percent) {
     return a * (1 + percent / 100);
 }
 
-console.log(increaseValuePercent(50, 25));
+console.log(increaseValuePercent(50, 16));
 console.log(increaseValuePercent(97, 50));
 
 
@@ -123,18 +123,32 @@ function calculateArraySum(arr) {
     return sum
 }
 
-
+function calculateArraySum2(arr) {
+    return arr.reduce((a, b) => a + b, 0);
+    // return arr.reduce(function(a, b) {
+    //     return a + b;
+    // }, 0);
+}
 
 console.log(calculateArraySum([2, 5, 5]));
-console.log(calculateArraySum([-2, 50, 5 , 0]));
+console.log(calculateArraySum2([-2, 50, 5 , 0]));
 
 
 /* ------------------------------------------------------*/
 
-// console.log("7/ Implémentez une fonction qui retourne une valeur aléatoire entre 0 et un nombre.");
+console.log("7/ Implémentez une fonction qui retourne une valeur aléatoire entre 0 et un nombre.");
 
-// console.log();
-// console.log();
+/**
+ * return a random value between 0 and a chosen number.
+ * @param {number} max - chosen number
+ * @returns {number} - random value
+ */
+function getRandomValue(max) {
+    return Math.floor(Math.random() * (max+1));
+}
+
+console.log(getRandomValue(10));
+console.log(getRandomValue(100));
 
 
 /* ------------------------------------------------------*/
