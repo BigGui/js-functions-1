@@ -153,10 +153,27 @@ console.log(getRandomValue(100));
 
 /* ------------------------------------------------------*/
 
-// console.log("8/ Implémentez une fonction qui retourne la moyenne des valeurs d'un tableau.");
+console.log("8/ Implémentez une fonction qui retourne la moyenne des valeurs d'un tableau.");
 
-// console.log();
-// console.log();
+/**
+ * Calculate the average of your array.
+ * @param {array} array Needs to be numbers only !
+ * @returns {number} average <3
+ */
+function calcAverageArray(array){
+    return calculateArraySum(array) / array.length;
+}
+
+function calcAverageArray2(arr) {
+    let sum = 0;
+    for (const item of arr) {
+        sum += item
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverageArray2([2, 16, 27, 7772]));
+console.log(calcAverageArray2([5, 28, 12.325]));
 
 
 /* ------------------------------------------------------*/
