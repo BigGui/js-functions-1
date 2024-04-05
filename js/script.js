@@ -85,11 +85,26 @@ console.log(increaseValuePercent(97, 50));
 
 /* ------------------------------------------------------*/
 
-// console.log("5/ Implémentez une fonction qui retourne la valeur maximale entre 3 valeurs.");
+console.log("5/ Implémentez une fonction qui retourne la valeur maximale entre 3 valeurs.");
 
-// console.log();
-// console.log();
+// function getMaxValue(...c){
+//     return Math.max(...c);
+// }
+// console.log(getMaxValue(10,20, 30));
+// console.log(getMaxValue(70,60, 50));
 
+/**
+ * get the max value of three values
+ * @param {number} a first value
+ * @param {number} b second value
+ * @param {number} c last value
+ * @returns {number} return max value
+ */
+function getMaxValue(a, b, c){
+    return Math.max(a, b, c);
+}
+console.log(getMaxValue(10,20, 30));
+console.log(getMaxValue(70,60, 50));
 
 /* ------------------------------------------------------*/
 
