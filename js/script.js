@@ -100,18 +100,33 @@ console.log("5/ Implémentez une fonction qui retourne la valeur maximale entre 
  * @param {number} c last value
  * @returns {number} return max value
  */
-function getMaxValue(a, b, c){
+function getMaxValue(a, b, c) {
     return Math.max(a, b, c);
 }
-console.log(getMaxValue(10,20, 30));
-console.log(getMaxValue(70,60, 50));
+console.log(getMaxValue(10, 20, 30));
+console.log(getMaxValue(70, 60, 50));
 
 /* ------------------------------------------------------*/
 
-// console.log("6/ Implémentez une fonction qui retourne la somme des valeurs d'un tableau.");
+console.log("6/ Implémentez une fonction qui retourne la somme des valeurs d'un tableau.");
 
-// console.log();
-// console.log();
+/**
+ * calculate the array sum 
+ * @param {array} arr array of numbers ex. [2, 4 ,10,..]
+ * @returns {number} the sum of the given array.
+ */
+function calculateArraySum(arr) {
+    let sum = 0;
+    for (const item of arr) {
+        sum += item
+    }
+    return sum
+}
+
+
+
+console.log(calculateArraySum([2, 5, 5]));
+console.log(calculateArraySum([-2, 50, 5 , 0]));
 
 
 /* ------------------------------------------------------*/
