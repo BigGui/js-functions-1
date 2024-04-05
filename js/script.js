@@ -67,10 +67,20 @@ console.log(getLastArrayValue(arrayTwo));
 
 /* ------------------------------------------------------*/
 
-// console.log("4/ Implémentez une fonction qui retourne la valeur en entrée augmentée d'un pourcentage d'augmentation.");
+console.log("4/ Implémentez une fonction qui retourne la valeur en entrée augmentée d'un pourcentage d'augmentation.");
 
-// console.log();
-// console.log();
+/**
+ * increases a value with a percentage without %
+ * @param {number} a arbitrary value to increase.
+ * @param {number} percent percentage without % (ex : 1, 2, 3)
+ * @returns {number} value "a" increased.
+ */
+function increaseValuePercent(a, percent) {
+    return a * (1 + percent / 100);
+}
+
+console.log(increaseValuePercent(50, 25));
+console.log(increaseValuePercent(97, 50));
 
 
 /* ------------------------------------------------------*/
