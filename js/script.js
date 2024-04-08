@@ -164,6 +164,11 @@ function calcAverageArray(array){
     return calculateArraySum(array) / array.length;
 }
 
+/**
+ * Same thing than above but longer
+ * @param {array} arr Needs to be numbers only !
+ * @returns average.
+ */
 function calcAverageArray2(arr) {
     let sum = 0;
     for (const item of arr) {
@@ -178,10 +183,23 @@ console.log(calcAverageArray2([5, 28, 12.325]));
 
 /* ------------------------------------------------------*/
 
-// console.log("9/ Implémentez une fonction qui retourne une durée en heures et minutes depuis une durée en minutes.");
+console.log("9/ Implémentez une fonction qui retourne une durée en heures et minutes depuis une durée en minutes.");
 
-// console.log();
-// console.log();
+/**
+ * Get a duration in hours/minutes from minutes.
+ * @param {number} minutes - duration in minutes.
+ * @returns {string} - duration in hours/minutes.
+ */
+function getHoursMinutes(minutes) {
+    
+    const hours = Math.floor(minutes/60);
+    minutes %= 60;
+    
+    return `Cela donne ${hours} heures et ${minutes} minutes.`;
+}
+
+console.log(getHoursMinutes(185));
+console.log(getHoursMinutes(666));
 
 
 /* ------------------------------------------------------*/
@@ -202,7 +220,7 @@ console.log(calcAverageArray2([5, 28, 12.325]));
 
 /* ------------------------------------------------------*/
 
-// console.log("12/ Implémentez une fonction qui retourne une valeur aléatoire dans un tableau.");
+// console.log("12/ Implémentez une fonction qui retourne une valeur aléatoire d'un tableau.");
 
 // console.log();
 // console.log();
