@@ -316,9 +316,9 @@ console.log("13/ Implémentez une fonction qui retourne le nombre de mots dans u
  * @returns {number} - return the number of words
  */
 
-function getNbrWord(text) {
+function countWords(text) {
     return text.split(' ').length;
     // return text.split(/[\s\'\-]/g).length;
 }
-console.log(getNbrWord("Les chaussettes de l'archiduchesse sont sèches"));
+console.log(countWords("Les chaussettes de l'archiduchesse sont sèches"));
 console.log();
