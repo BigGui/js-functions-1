@@ -250,18 +250,60 @@ console.log(getMinValueArray2(numtable2));
 
 /* ------------------------------------------------------*/
 
-// console.log("11/ Implémentez une fonction qui retourne la clé d'un objet pour la valeur maximale .");
+console.log("11/ Implémentez une fonction qui retourne la clé d'un objet pour la valeur maximale .");
 
-// console.log();
-// console.log();
+/**
+ * Get object key with highest value
+ * @param {object} object 
+ * @returns {string} key with highest value
+ */
+function getMaxKey(object) {
+    const max = Math.max(...Object.values(object));
+    for (const key in object) {
+        if (max === object[key]) {
+            return key;
+        }
+    }
+}
+
+function getMaxKey2(object) {
+    let maxKey;
+    for (const key in object) {
+        if (maxKey === undefined || object[key] > object[maxKey]) {
+            maxKey = key;
+        }
+    }
+    return maxKey;
+}
+
+
+function getMaxKey3(object) {
+    return Object.keys(object).filter(v => object[v] === Math.max(...Object.values(object)));
+}
+
+const objectValues = { pierre: 23, esmée: 63, jean: 56 , sophie: 63 };
+console.log(getMaxKey(objectValues));
+console.log(getMaxKey2(objectValues));
+console.log(getMaxKey3(objectValues));
 
 
 /* ------------------------------------------------------*/
 
-// console.log("12/ Implémentez une fonction qui retourne une valeur aléatoire d'un tableau.");
+console.log("12/ Implémentez une fonction qui retourne une valeur aléatoire d'un tableau.");
 
-// console.log();
-// console.log();
+const arrayTab = [12, 32, 65, 34];
+
+/**
+ * Gets a random value from an array
+ * @param {array} array of datas 
+ * @returns {*} - a random value
+ */
+function getRandomArrayValue(array) {
+    return array[getRandomValue(array.length-1)];
+}
+
+console.log(getRandomArrayValue(arrayTab));
+console.log();
 
 
 /* ------------------------------------------------------*/
