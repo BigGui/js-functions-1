@@ -281,7 +281,7 @@ function getMaxKey3(object) {
     return Object.keys(object).filter(v => object[v] === Math.max(...Object.values(object)));
 }
 
-const objectValues = { pierre: 23, esmée: 63, jean: 56 , sophie: 63 };
+const objectValues = { pierre: 23, esmée: 63, jean: 56, sophie: 63 };
 console.log(getMaxKey(objectValues));
 console.log(getMaxKey2(objectValues));
 console.log(getMaxKey3(objectValues));
@@ -299,7 +299,8 @@ const arrayTab = [12, 32, 65, 34];
  * @returns {*} - a random value
  */
 function getRandomArrayValue(array) {
-    return array[getRandomValue(array.length-1)];
+    return array[getRandomValue(array.length - 1)];
+    // return array[Math.floor(Math.random() * array.length)];
 }
 
 console.log(getRandomArrayValue(arrayTab));
@@ -308,7 +309,15 @@ console.log();
 
 /* ------------------------------------------------------*/
 
-// console.log("13/ Implémentez une fonction qui retourne le nombre de mots dans un texte.");
+console.log("13/ Implémentez une fonction qui retourne le nombre de mots dans un texte.");
+/**
+ * Count words
+ * @param {string} text - enter a paragraph
+ * @returns {number} - return the number of words
+ */
 
-// console.log();
-// console.log();
+function getNbrWord(text) {
+    return text.split(' ').length;
+}
+console.log(getNbrWord("Les chaussettes de l'archiduchesse sont sèches"));
+console.log();
