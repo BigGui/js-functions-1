@@ -198,8 +198,24 @@ function getHoursMinutes(minutes) {
     return `Cela donne ${hours} heures et ${minutes} minutes.`;
 }
 
+
+/**
+ * Get a duration in hours/minutes from minutes.
+ * @param {number} minutes - duration in minutes.
+ * @returns {object} - duration in hours/minutes.
+ */
+function getHoursMinutesObject(minutes) {
+    return {
+        hours: Math.floor(minutes/60),
+        minutes: minutes % 60
+    };
+}
+
+
 console.log(getHoursMinutes(185));
 console.log(getHoursMinutes(666));
+const d = getHoursMinutesObject(666);
+// console.log(Object.keys(d).map((k, i, a) => d[k] + ' ' + k).join(' '));
 
 
 /* ------------------------------------------------------*/
