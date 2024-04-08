@@ -211,7 +211,6 @@ function getHoursMinutesObject(minutes) {
     };
 }
 
-
 console.log(getHoursMinutes(185));
 console.log(getHoursMinutes(666));
 const d = getHoursMinutesObject(666);
@@ -220,10 +219,23 @@ const d = getHoursMinutesObject(666);
 
 /* ------------------------------------------------------*/
 
-// console.log("10/ Implémentez une fonction qui retourne la valeur minimale d'un tableau.");
+console.log("10/ Implémentez une fonction qui retourne la valeur minimale d'un tableau.");
 
-// console.log();
-// console.log();
+const numtable = [25, 15, 61, 464, 5451, 2];
+const numtable2 = [25, 1, 61, 464, 5451, -2];
+
+/**
+ * get the smallest number from an array.
+ * @param {array} array array that only contains numbers.
+ * @returns {number} the smallest number from the array.
+ */
+function getMinValueArray(array) {
+    return Math.min(...array);
+}
+
+console.log(getMinValueArray(numtable));
+console.log(getMinValueArray(numtable2));
+
 
 
 /* ------------------------------------------------------*/
