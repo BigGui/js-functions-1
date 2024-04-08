@@ -131,7 +131,7 @@ function calculateArraySum2(arr) {
 }
 
 console.log(calculateArraySum([2, 5, 5]));
-console.log(calculateArraySum2([-2, 50, 5 , 0]));
+console.log(calculateArraySum2([-2, 50, 5, 0]));
 
 
 /* ------------------------------------------------------*/
@@ -144,7 +144,7 @@ console.log("7/ Implémentez une fonction qui retourne une valeur aléatoire ent
  * @returns {number} - random value
  */
 function getRandomValue(max) {
-    return Math.floor(Math.random() * (max+1));
+    return Math.floor(Math.random() * (max + 1));
 }
 
 console.log(getRandomValue(10));
@@ -160,7 +160,7 @@ console.log("8/ Implémentez une fonction qui retourne la moyenne des valeurs d'
  * @param {array} array Needs to be numbers only !
  * @returns {number} average <3
  */
-function calcAverageArray(array){
+function calcAverageArray(array) {
     return calculateArraySum(array) / array.length;
 }
 
@@ -191,10 +191,10 @@ console.log("9/ Implémentez une fonction qui retourne une durée en heures et m
  * @returns {string} - duration in hours/minutes.
  */
 function getHoursMinutes(minutes) {
-    
-    const hours = Math.floor(minutes/60);
+
+    const hours = Math.floor(minutes / 60);
     minutes %= 60;
-    
+
     return `Cela donne ${hours} heures et ${minutes} minutes.`;
 }
 
@@ -206,7 +206,7 @@ function getHoursMinutes(minutes) {
  */
 function getHoursMinutesObject(minutes) {
     return {
-        hours: Math.floor(minutes/60),
+        hours: Math.floor(minutes / 60),
         minutes: minutes % 60
     };
 }
@@ -233,8 +233,18 @@ function getMinValueArray(array) {
     return Math.min(...array);
 }
 
+
 console.log(getMinValueArray(numtable));
 console.log(getMinValueArray(numtable2));
+
+
+
+function getMinValueArray2(array) {
+    return array.reduce((a, b) => a < b ? a : b);
+}
+
+console.log(getMinValueArray2(numtable));
+console.log(getMinValueArray2(numtable2));
 
 
 
